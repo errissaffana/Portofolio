@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erris Saffana Zuhaera - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Bodoni Moda', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        scrap: {
+                            sage: '#5f6f65',      /* Hijau tenang header & footer */
+                            creamLight: '#f4f1eb',/* Background krem terang utama */
+                            creamDark: '#ded9cf', /* Background krem gelap/kertas koran */
+                            textDark: '#1c1e1d',  /* Warna teks utama */
+                            textMuted: '#606462', /* Warna teks sekunder */
+                            tape: 'rgba(210, 204, 192, 0.6)' /* Efek selotip washi */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .paper-shadow {
+            box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.06), -1px 2px 6px rgba(0, 0, 0, 0.03);
+        }
+        .washi-tape {
+            background: linear-gradient(90deg, rgba(218,212,197,0.5) 0%, rgba(226,220,206,0.7) 50%, rgba(218,212,197,0.5) 100%);
+            backdrop-filter: blur(0.5px);
+            border-left: 1px dashed rgba(0,0,0,0.05);
+            border-right: 1px dashed rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="bg-scrap-creamLight text-scrap-textDark font-sans antialiased">
+
+    <header class="relative min-h-[90vh] bg-scrap-sage text-white flex flex-col justify-between overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1500&q=80')] bg-cover bg-center opacity-40 mix-blend-multiply pointer-events-none"></div>
+
+        <nav class="relative z-10 flex justify-between items-center px-6 py-5 md:px-12 text-[10px] tracking-[0.25em] uppercase font-medium">
+            <span class="font-serif text-lg tracking-normal font-bold">ESZ.</span>
+            <div class="hidden md:flex space-x-8 opacity-90">
+                <a href="#about" class="hover:opacity-60 transition-opacity">ABOUT</a>
+                <a href="#experience" class="hover:opacity-60 transition-opacity">EXPERIENCE</a>
+                <a href="#organization" class="hover:opacity-60 transition-opacity">ORGANIZATION</a>
+                <a href="#projects" class="hover:opacity-60 transition-opacity">AWARDS</a>
+                <a href="#contact" class="hover:opacity-60 transition-opacity">CONTACT</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-lg"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+
+        <div class="relative z-10 text-center px-4 my-auto max-w-4xl mx-auto space-y-4">
+            <h1 class="text-4xl md:text-7xl font-serif tracking-wide uppercase leading-tight">
+                ERRIS SAFFANA<br><span class="italic font-normal tracking-normal">Zuhaera</span>
+            </h1>
+            <div class="inline-block border border-white/40 px-6 py-2 text-[10px] tracking-[0.2em] uppercase rounded-full bg-black/10 backdrop-blur-sm">
+                Portfolio Website &middot; 2026
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-scrap-sage z-50 flex flex-col items-center py-4 space-y-3 text-[10px] tracking-wider border-t border-white/10">
+            <a href="#about" class="block py-1">ABOUT</a>
+            <a href="#experience" class="block py-1">EXPERIENCE</a>
+            <a href="#organization" class="block py-1">ORGANIZATION</a>
+            <a href="#projects" class="block py-1">AWARDS</a>
+            <a href="#contact" class="block py-1">CONTACT</a>
+        </div>
+
+        <div class="relative w-full overflow-hidden leading-[0] z-20">
+            <svg viewBox="0 0 1200 120" class="relative block w-full h-12 text-scrap-creamDark fill-current" preserveAspectRatio="none">
+                <path d="M0,60 L45,45 L90,65 L135,50 L180,75 L225,55 L270,60 L315,40 L360,65 L405,55 L450,70 L495,45 L540,60 L585,50 L630,75 L675,55 L720,65 L765,45 L810,70 L855,55 L900,60 L945,40 L990,65 L1035,50 L1080,70 L1125,55 L1170,65 L1200,45 L1200,120 L0,120 Z"></path>
+            </svg>
+        </div>
+    </header>
+
+
+    <section class="bg-scrap-creamDark pb-20 pt-4 px-6 md:px-12 relative">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+            
+            <div class="md:col-span-5 flex justify-center relative pt-8">
+                <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-28 h-6 washi-tape z-10 transform -rotate-2"></div>
+                <div class="bg-white p-4 pb-12 paper-shadow transform -rotate-3 border border-gray-100 max-w-[240px]">
+                    <img src="foto_eris.jpg" alt="Erris" class="w-full h-56 object-cover grayscale-[15%]">
+                    <p class="font-serif italic text-center text-xs text-scrap-textMuted mt-4">Fresh Graduate, 2026</p>
+                </div>
+            </div>
+
+            <div class="md:col-span-7 space-y-4 text-center md:text-left">
+                <h3 class="font-serif italic text-xl md:text-2xl text-scrap-textDark leading-relaxed">
+                    "Menggabungkan ilmu agronomi praktis dengan inovasi digital untuk efisiensi proteksi tanaman."
+                </h3>
+                <p class="text-xs text-scrap-textMuted leading-relaxed font-light max-w-lg">
+                    Sarjana Pertanian lulusan Universitas Muhammadiyah Yogyakarta (IPK 3.98/4.00). Berpengalaman nyata dalam manajemen budidaya, riset proteksi, asisten statistik, hingga pengembangan kecerdasan buatan (*Computer Vision*) untuk deteksi hama padi.
+                </p>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
+            <svg viewBox="0 0 1200 120" class="relative block w-full h-10 text-scrap-creamLight fill-current" preserveAspectRatio="none">
+                <path d="M0,50 L50,65 L100,45 L150,70 L200,55 L250,60 L300,40 L350,65 L400,50 L450,75 L500,55 L550,60 L600,45 L650,70 L700,55 L750,60 L800,40 L855,65 L900,50 L950,75 L1000,55 L1050,65 L1100,45 L1150,70 L1200,50 L1200,120 L0,120 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+
+    <section id="about" class="bg-scrap-creamLight py-20 px-6 md:px-12">
+        <div class="max-w-5xl mx-auto space-y-12">
+            <div class="text-center space-y-2">
+                <h2 class="font-serif text-2xl md:text-3xl uppercase tracking-wider">Bidang Kompetensi & Fokus</h2>
+                <div class="w-12 h-[1px] bg-scrap-textDark mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover rounded-t-[40px] rounded-b-sm border border-gray-200/60 shadow-sm" alt="Agronomi">
+                    <h4 class="font-serif text-lg font-bold text-center">01 / Agronomi & Budidaya</h4>
+                    <p class="text-xs text-scrap-textMuted text-center leading-relaxed font-light px-2">Sistem pertanian terpadu, sampling tanah, manajemen hidroponik, kokedama, serta inspeksi lapangan berlisensi BNSP.</p>
+                </div>
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover rounded-t-[40px] rounded-b-sm border border-gray-200/60 shadow-sm" alt="Proteksi Tanaman">
+                    <h4 class="font-serif text-lg font-bold text-center">02 / Proteksi & Lab Riset</h4>
+                    <p class="text-xs text-scrap-textMuted text-center leading-relaxed font-light px-2">Identifikasi morfologi hama/penyakit tanaman, rearing BSF, teknik bioesai, serta kalibrasi alat semprot di laboratorium.</p>
+                </div>
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover rounded-t-[40px] rounded-b-sm border border-gray-200/60 shadow-sm" alt="AI Agriculture">
+                    <h4 class="font-serif text-lg font-bold text-center">03 / Data & Smart Farming</h4>
+                    <p class="text-xs text-scrap-textMuted text-center leading-relaxed font-light px-2">Analisis statistik spasial (SPSS, SAS), pemetaan lahan via ArcGIS/UTM Geo Map, serta labeling dataset AI Computer Vision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-scrap-creamDark py-20 px-6 md:px-12 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-20">
+            <svg viewBox="0 0 1200 120" class="relative block w-full h-10 text-scrap-creamLight fill-current transform rotate-180" preserveAspectRatio="none">
+                <path d="M0,50 L50,65 L100,45 L150,70 L200,55 L250,60 L300,40 L350,65 L400,50 L450,75 L500,55 L550,60 L600,45 L650,70 L700,55 L750,60 L800,40 L855,65 L900,50 L950,75 L1000,55 L1050,65 L1100,45 L1150,70 L1200,50 L1200,120 L0,120 Z"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-5xl mx-auto space-y-12 pt-6">
+            <div class="text-center space-y-2">
+                <h2 class="font-serif text-2xl md:text-3xl uppercase tracking-wider">Pengalaman Utama</h2>
+                <p class="text-[10px] tracking-widest text-scrap-textMuted uppercase">Track Record Akademik & Industri</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white border border-gray-200 p-4 rounded-sm shadow-sm space-y-3">
+                    <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=500&q=80" class="w-full h-40 object-cover rounded-sm filter grayscale-[20%]" alt="TLab">
+                    <div class="flex justify-between items-center text-[10px] text-scrap-textMuted font-bold">
+                        <span>JUL - AUG 2025</span>
+                        <span class="bg-scrap-creamDark px-2 py-0.5 rounded-full">INTERN</span>
+                    </div>
+                    <h4 class="font-serif font-bold text-sm">Computer Vision Intern</h4>
+                    <p class="text-[11px] text-scrap-textMuted leading-relaxed">PT Teknologi Kode Indonesia TLab. Mengembangkan dan melabeli dataset hama padi untuk model AI OCELLI (Smart Insect Trap).</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 p-4 rounded-sm shadow-sm space-y-3">
+                    <img src="https://images.unsplash.com/photo-1532187863486-abf9d39d6618?auto=format&fit=crop&w=500&q=80" class="w-full h-40 object-cover rounded-sm filter grayscale-[20%]" alt="Lab Perlindungan">
+                    <div class="flex justify-between items-center text-[10px] text-scrap-textMuted font-bold">
+                        <span>MAR - JUL 2025</span>
+                        <span class="bg-scrap-creamDark px-2 py-0.5 rounded-full">CO-ASST</span>
+                    </div>
+                    <h4 class="font-serif font-bold text-sm">Asisten Lab Perlindungan Tanaman</h4>
+                    <p class="text-[11px] text-scrap-textMuted leading-relaxed">UMY. Membimbing praktikan dalam monitoring OPT, kalibrasi alat semprot, serta agens pengendali hayati.</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 p-4 rounded-sm shadow-sm space-y-3">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" class="w-full h-40 object-cover rounded-sm filter grayscale-[20%]" alt="Statistik">
+                    <div class="flex justify-between items-center text-[10px] text-scrap-textMuted font-bold">
+                        <span>FEB 2024 - JUL 2025</span>
+                        <span class="bg-scrap-creamDark px-2 py-0.5 rounded-full">CO-ASST</span>
+                    </div>
+                    <h4 class="font-serif font-bold text-sm">Asisten Laboratorium Statistik</h4>
+                    <p class="text-[11px] text-scrap-textMuted leading-relaxed">UMY. Memandu mahasiswa semester 2 melakukan analisis data rancangan percobaan via Excel, SPSS, dan SAS.</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 p-4 rounded-sm shadow-sm space-y-3">
+                    <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=500&q=80" class="w-full h-40 object-cover rounded-sm filter grayscale-[20%]" alt="SGN">
+                    <div class="flex justify-between items-center text-[10px] text-scrap-textMuted font-bold">
+                        <span>SEP 2023 - JAN 2024</span>
+                        <span class="bg-scrap-creamDark px-2 py-0.5 rounded-full">MAGANG</span>
+                    </div>
+                    <h4 class="font-serif font-bold text-sm">Staff Budidaya Tebu</h4>
+                    <p class="text-[11px] text-scrap-textMuted leading-relaxed">PT Sinergi Gula Nusantara (PG Soedhono). Praktik pemeliharaan tebu, tebang muat angkut, serta pemetaan database lahan petani via ArcGIS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="experience" class="bg-scrap-creamLight py-24 px-6 md:px-12 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center space-y-4 mb-16">
+            <h2 class="font-serif text-2xl md:text-3xl uppercase tracking-wider">Dokumentasi & Aktivitas</h2>
+            <p class="text-xs text-scrap-textMuted max-w-md mx-auto leading-relaxed">Kliping visual kegiatan riset lapangan, laboratorium, dan konferensi sains internasional.</p>
+        </div>
+
+        <div class="max-w-5xl mx-auto relative h-[420px] md:h-[320px] flex flex-wrap justify-center items-center gap-6">
+            
+            <div class="bg-white p-3 pb-8 paper-shadow transform -rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-300 border border-gray-100 w-36 md:w-44 absolute left-4 md:left-12 top-0">
+                <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=400&q=80" class="w-full h-28 md:h-36 object-cover" alt="Field 1">
+                <p class="font-serif italic text-[10px] text-center mt-2 text-scrap-textMuted">Fieldwork UMY</p>
+            </div>
+
+            <div class="bg-white p-3 pb-8 paper-shadow transform rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 border border-gray-100 w-36 md:w-44 absolute left-1/3 md:left-1/4 top-12 z-10">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-4 washi-tape"></div>
+                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&q=80" class="w-full h-28 md:h-36 object-cover" alt="Lab 1">
+                <p class="font-serif italic text-[10px] text-center mt-2 text-scrap-textMuted">Lab Proteksi</p>
+            </div>
+
+            <div class="bg-white p-3 pb-8 paper-shadow transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 border border-gray-100 w-36 md:w-44 absolute left-1/2 md:left-1/2 top-4 z-20">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" class="w-full h-28 md:h-36 object-cover" alt="LO Event">
+                <p class="font-serif italic text-[10px] text-center mt-2 text-scrap-textMuted">9th ITFSS, LO</p>
+            </div>
+
+            <div class="bg-white p-3 pb-8 paper-shadow transform rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-300 border border-gray-100 w-36 md:w-44 absolute right-4 md:right-16 top-16">
+                <div class="absolute -top-3 left-1/3 w-16 h-4 washi-tape"></div>
+                <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?auto=format&fit=crop&w=400&q=80" class="w-full h-28 md:h-36 object-cover" alt="Dataset AI">
+                <p class="font-serif italic text-[10px] text-center mt-2 text-scrap-textMuted">Computer Vision</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="organization" class="bg-scrap-creamDark py-20 px-6 md:px-12 relative">
+        <div class="absolute inset-0 pointer-events-none opacity-20">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="none">
+                <path d="M100,50 Q400,200 200,400 T700,550" fill="none" stroke="#1c1e1d" stroke-width="2" stroke-dasharray="6,6"/>
+            </svg>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-16 relative z-10">
+            <div class="text-center space-y-2">
+                <h2 class="font-serif text-2xl md:text-3xl uppercase tracking-wider">Grup Kerja & Organisasi</h2>
+                <p class="text-[10px] tracking-widest text-scrap-textMuted uppercase">Aliansi Global & Kepemimpinan Regional</p>
+            </div>
+
+            <div class="space-y-16 max-w-2xl mx-auto">
+                <div class="relative bg-white p-5 pb-10 paper-shadow border border-gray-100 max-w-lg transform -rotate-1 ml-0">
+                    <div class="absolute -top-3 left-10 w-24 h-5 washi-tape"></div>
+                    <div class="flex justify-between items-baseline mb-2 text-xs text-scrap-textMuted font-serif italic">
+                        <span>IAAS World (2023 - 2024)</span>
+                        <span class="font-sans text-[10px] not-italic uppercase tracking-widest font-bold text-scrap-scrap-sage">Global</span>
+                    </div>
+                    <h4 class="font-serif font-bold text-base mb-1">Quality Board of Expro Promoter</h4>
+                    <p class="text-xs text-scrap-textMuted font-light leading-relaxed">Mengelola publikasi internasional, strategi kampanye digital global, serta dokumentasi testimoni program pertukaran pemuda tani dunia.</p>
+                </div>
+
+                <div class="relative bg-white p-5 pb-10 paper-shadow border border-gray-100 max-w-lg transform rotate-2 md:ml-auto mr-0">
+                    <div class="absolute -top-3 right-12 w-24 h-5 washi-tape"></div>
+                    <div class="flex justify-between items-baseline mb-2 text-xs text-scrap-textMuted font-serif italic">
+                        <span>IAAS LC UMY (2023)</span>
+                        <span>Lokal</span>
+                    </div>
+                    <h4 class="font-serif font-bold text-base mb-1">Secretary of Exchange Department</h4>
+                    <p class="text-xs text-scrap-textMuted font-light leading-relaxed">Menyusun administrasi berkas bulanan, profil anggota, proposal kemitraan, serta Memorandum of Understanding (MoU) dengan mitra petani hosting nasional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="bg-scrap-creamLight py-20 px-6 md:px-12">
+        <div class="max-w-5xl mx-auto space-y-12">
+            <div class="text-center space-y-2">
+                <h2 class="font-serif text-2xl md:text-3xl uppercase tracking-wider">Simposium & Penghargaan</h2>
+                <div class="w-12 h-[1px] bg-scrap-textDark mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-6 border border-gray-100 shadow-sm flex gap-4 items-start rounded-sm">
+                    <div class="text-scrap-sage text-xl pt-1"><i class="fa-solid fa-microphone-lines"></i></div>
+                    <div class="space-y-1">
+                        <h4 class="font-serif font-bold text-base">Presenter at YMIOS Japan (2025)</h4>
+                        <p class="text-xs text-scrap-textMuted leading-relaxed font-light">Mempresentasikan temuan riset siklus hidup Black Soldier Fly (BSF) pada media ampas tahu di ajang Yamadai Mizuabu International One Hour Symposium.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 border border-gray-100 shadow-sm flex gap-4 items-start rounded-sm">
+                    <div class="text-scrap-sage text-xl pt-1"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="space-y-1">
+                        <h4 class="font-serif font-bold text-base">Pendanaan PKM-K KEMENDIKBUD RI</h4>
+                        <p class="text-xs text-scrap-textMuted leading-relaxed font-light">Meraih pendanaan hibah nasional melalui proyek inovasi sendok ramah lingkungan berbahan dasar ekstrak Daun Kelor ("Sebuah Sendok Untuk Disantap").</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-scrap-creamDark py-20 px-6 md:px-12 relative">
+        <div class="max-w-2xl mx-auto space-y-10">
+            <div class="text-center space-y-2">
+                <h2 class="font-serif text-2xl uppercase tracking-wider">FAQ</h2>
+                <div class="w-12 h-[1px] bg-scrap-textDark mx-auto"></div>
+            </div>
+
+            <div class="border-t border-scrap-textDark/20 divide-y divide-scrap-textDark/20 text-xs">
+                <div class="py-4 flex justify-between items-center cursor-pointer">
+                    <span>Apakah tersedia untuk kolaborasi riset proteksi tanaman?</span>
+                    <span><i class="fa-solid fa-plus"></i></span>
+                </div>
+                <div class="py-4 flex justify-between items-center cursor-pointer">
+                    <span>Bagaimana cara menghubungi untuk kebutuhan proyek Computer Vision?</span>
+                    <span><i class="fa-solid fa-plus"></i></span>
+                </div>
+                <div class="py-4 flex justify-between items-center cursor-pointer">
+                    <span>Apakah terbuka untuk peluang penempatan kerja di luar Jawa Tengah?</span>
+                    <span><i class="fa-solid fa-plus"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="contact" class="bg-scrap-sage text-white/90 pt-20 pb-10 px-6 md:px-12 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-20">
+            <svg viewBox="0 0 1200 120" class="relative block w-full h-10 text-scrap-creamDark fill-current transform rotate-180" preserveAspectRatio="none">
+                <path d="M0,50 L50,65 L100,45 L150,70 L200,55 L250,60 L300,40 L350,65 L400,50 L450,75 L500,55 L550,60 L600,45 L650,70 L700,55 L750,60 L800,40 L855,65 L900,50 L950,75 L1000,55 L1050,65 L1100,45 L1150,70 L1200,50 L1200,120 L0,120 Z"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-start relative z-30 pt-4">
+            <div class="md:col-span-5 space-y-6">
+                <h2 class="font-serif text-3xl md:text-4xl tracking-wide uppercase leading-tight">TERTARIK UNTUK<br><span class="italic font-normal tracking-normal">Bekerjasama?</span></h2>
+                <p class="text-xs text-white/70 font-light leading-relaxed">Jangan ragu untuk mengirimkan pesan singkat terkait kebutuhan operasional agribisnis, riset laboratorium, maupun integrasi teknologi pertanian pintar.</p>
+                
+                <div class="text-xs space-y-2 pt-2 opacity-90 tracking-wide">
+                    <p><i class="fa-solid fa-envelope mr-3"></i> <a href="mailto:errissaffana3@gmail.com" class="underline">errissaffana3@gmail.com</a></p>
+                    <p><i class="fa-solid fa-phone mr-3"></i> <a href="https://wa.me/6282329246659" target="_blank" class="underline">+62 823 2924 6659</a></p>
+                    <p><i class="fa-brands fa-linkedin mr-3"></i> <a href="http://www.linkedin.com/in/erris-saffana-2a0219222" target="_blank" class="underline">linkedin.com/in/erris-saffana</a></p>
+                </div>
+            </div>
+
+            <div class="md:col-span-7 w-full">
+                <form class="space-y-4 text-xs" onsubmit="event.preventDefault();">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" placeholder="FULL NAME" class="w-full bg-white/10 border-b border-white/30 px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white transition-colors bg-transparent">
+                        <input type="email" placeholder="EMAIL ADDRESS" class="w-full bg-white/10 border-b border-white/30 px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white transition-colors bg-transparent">
+                    </div>
+                    <textarea rows="3" placeholder="YOUR MESSAGE" class="w-full bg-white/10 border-b border-white/30 px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white transition-colors bg-transparent"></textarea>
+                    
+                    <button type="button" class="border border-white hover:bg-white hover:text-scrap-sage text-white font-bold px-8 py-3.5 tracking-widest uppercase transition-all duration-300 w-full sm:w-auto">
+                        SEND MESSAGE <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto mt-20 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between text-[9px] tracking-widest text-white/50 uppercase">
+            <span>&copy; 2026 Erris Saffana Zuhaera. All Rights Reserved.</span>
+            <span class="mt-2 sm:mt-0">DESIGNED TO MATCH THE REFERENCE ART ALBUM MOOD</span>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
