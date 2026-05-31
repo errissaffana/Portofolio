@@ -43,9 +43,17 @@
 </head>
 <body class="bg-scrap-creamLight text-scrap-textDark font-sans antialiased">
 
-   <header class="relative bg-scrap-sage text-white flex flex-col justify-between overflow-hidden">
+ <!-- Menggunakan aspek rasio spanduk LinkedIn asli (~3:1 di desktop, fleksibel di mobile) -->
+<header class="relative w-full aspect-[2/1] sm:aspect-[2.5/1] md:aspect-[3.1/1] text-white flex flex-col justify-between overflow-hidden">
     
-    <nav class="relative z-10 flex justify-between items-center px-6 py-5 md:px-12 text-[10px] tracking-[0.25em] uppercase font-medium">
+    <!-- GAMBAR LATAR BELAKANG FULL (Menutup Sempurna Tanpa Sisa BG Polos) -->
+   <div class="absolute inset-0 bg-[url('Background.png')] bg-cover bg-[65%_center] pointer-events-none z-0"></div>
+
+    <!-- Overlay halus pelapis warna -->
+    <div class="absolute inset-0 bg-scrap-sage/10 mix-blend-multiply pointer-events-none z-0"></div>
+
+    <!-- NAVIGASI (Melayang cantik langsung di atas gambar) -->
+    <nav class="relative z-10 flex justify-between items-center px-6 py-4 md:px-12 text-[10px] tracking-[0.25em] uppercase font-medium bg-gradient-to-b from-black/20 to-transparent">
         <span class="font-serif text-lg tracking-normal font-bold">ESZ.</span>
         <div class="hidden md:flex space-x-8 opacity-90">
             <a href="#about" class="hover:opacity-60 transition-opacity">ABOUT</a>
@@ -57,27 +65,10 @@
         <button id="menu-btn" class="md:hidden text-lg"><i class="fa-solid fa-bars"></i></button>
     </nav>
 
-    <div class="relative w-full z-0 leading-[0]">
-        <img src="Background.png" alt="Erris Saffana Banner" class="w-full h-auto object-contain">
-        
-        <div class="absolute inset-0 bg-scrap-sage/10 mix-blend-multiply pointer-events-none"></div>
-    </div>
+    <!-- CONTAINER KOSONG UNTUK MENJAGA STRUKTUR FLEX SPACING -->
+    <div class="flex-grow"></div>
 
-    <!-- <div class="relative z-10 text-center px-4 py-12 md:py-16 max-w-4xl mx-auto space-y-4">
-        <p class="text-[11px] tracking-[0.3em] text-white/85 uppercase font-light">Hello I’m</p>
-        <h1 class="text-4xl md:text-7xl font-serif tracking-wide uppercase leading-tight text-white">
-            ERRIS SAFFANA<br><span class="italic font-normal tracking-normal">Zuhaera</span>
-        </h1>
-        <p class="text-sm md:text-lg opacity-90 font-light font-serif tracking-wide max-w-2xl mx-auto italic text-white/90">
-            Bachelor's Degree in Agriculture
-        </p>
-        <div class="pt-4">
-            <a href="CV_ERRIS_SAFFANA_Z.pdf" class="inline-block border border-white text-white hover:bg-white hover:text-scrap-sage text-[10px] tracking-widest uppercase font-bold px-6 py-3 transition-all duration-300 rounded-sm">
-                Download CV & Portfolio
-            </a>
-        </div>
-    </div> -->
-
+    <!-- Mobile Menu Toggle Content -->
     <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-scrap-sage z-50 flex flex-col items-center py-4 space-y-3 text-[10px] tracking-wider border-t border-white/10">
         <a href="#about" class="block py-1">ABOUT</a>
         <a href="#experience" class="block py-1">WORK EXPERIENCE</a>
@@ -86,8 +77,10 @@
         <a href="#contact" class="block py-1">CONTACT</a>
     </div>
 
+    <!-- DEKORASI WAVE NAIK TURUN (Memotong langsung di dasar gambar banner) -->
     <div class="relative w-full overflow-hidden leading-[0] z-20">
-        <svg viewBox="0 0 1200 120" class="relative block w-full h-12 text-scrap-creamDark fill-current" preserveAspectRatio="none">
+        <!-- text-scrap-creamDark disesuaikan dengan warna background section setelah ini -->
+        <svg viewBox="0 0 1200 120" class="relative block w-full h-6 sm:h-10 md:h-12 text-scrap-creamDark fill-current" preserveAspectRatio="none">
             <path d="M0,60 L45,45 L90,65 L135,50 L180,75 L225,55 L270,60 L315,40 L360,65 L405,55 L450,70 L495,45 L540,60 L585,50 L630,75 L675,55 L720,65 L765,45 L810,70 L855,55 L900,60 L945,40 L990,65 L1035,50 L1080,70 L1125,55 L1170,65 L1200,45 L1200,120 L0,120 Z"></path>
         </svg>
     </div>
@@ -120,9 +113,20 @@
                 A fast learner who adapts quickly to new environments and technologies, with a strong curiosity for continuous growth and an open mindset toward new opportunities, collaborations, and challenges across the agricultural and research field.
             </p>
 
-            <div class="pt-2">
-                <a href="CV_ERRIS_SAFFANA_Z.pdf" class="inline-block border border-scrap-textDark text-scrap-textDark hover:bg-scrap-textDark hover:text-white text-[10px] tracking-widest uppercase font-bold px-6 py-3 transition-all duration-300 rounded-sm shadow-sm">
-                    Download CV & Portfolio
+           <div class="pt-2 flex flex-col md:flex-row gap-3 justify-center md:justify-start items-center md:items-stretch">
+                <!-- Tombol CV -->
+                <a href="CV_ERRIS_SAFFANA_Z.pdf" class="inline-block border border-scrap-textDark text-scrap-textDark hover:bg-scrap-textDark hover:text-white text-[10px] tracking-widest uppercase font-bold px-4 py-3 transition-all duration-300 rounded-sm shadow-sm text-center whitespace-nowrap">
+                Download CV
+                </a>
+
+                <!-- Tombol Portfolio Experience (Spasi diubah ke %20 agar link PDF aman) -->
+                <a href="portoexperience.pdf" class="inline-block border border-scrap-textDark text-scrap-textDark hover:bg-scrap-textDark hover:text-white text-[10px] tracking-widest uppercase font-bold px-4 py-3 transition-all duration-300 rounded-sm shadow-sm text-center whitespace-nowrap">
+                Portofolio Experience
+                </a>
+
+                <!-- Tombol Portfolio Design -->
+                <a href="designporto.pdf" class="inline-block border border-scrap-textDark text-scrap-textDark hover:bg-scrap-textDark hover:text-white text-[10px] tracking-widest uppercase font-bold px-4 py-3 transition-all duration-300 rounded-sm shadow-sm text-center whitespace-nowrap">
+                Portofolio Design
                 </a>
             </div>
         </div>
@@ -911,47 +915,36 @@
 </script>
 </section>
 
-    <footer id="contact" class="bg-scrap-sage text-white/90 pt-20 pb-10 px-6 md:px-12 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-20">
-            <svg viewBox="0 0 1200 120" class="relative block w-full h-10 text-scrap-creamDark fill-current transform rotate-180" preserveAspectRatio="none">
-                <path d="M0,50 L50,65 L100,45 L150,70 L200,55 L250,60 L300,40 L350,65 L400,50 L450,75 L500,55 L550,60 L600,45 L650,70 L700,55 L750,60 L800,40 L855,65 L900,50 L950,75 L1000,55 L1050,65 L1100,45 L1150,70 L1200,50 L1200,120 L0,120 Z"></path>
-            </svg>
-        </div>
+ <!-- Menggunakan bg-cover kembali agar gambar memenuhi layar tanpa celah samping, tinggi otomatis menyesuaikan padding -->
+<footer id="contact" class="relative text-white/90 px-6 md:px-12 overflow-hidden w-full h-auto flex flex-col justify-between">
+    
+    <!-- GAMBAR LATAR BELAKANG FOOTER (Full dari ujung ke ujung layar) -->
+    <div class="absolute inset-0 bg-[url('BG2.png')] bg-cover bg-center pointer-events-none z-0"></div>
+    
+    <!-- Overlay Gelap Halus tipis -->
+    <div class="absolute inset-0 bg-black/10 pointer-events-none z-0"></div>
 
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-start relative z-30 pt-4">
-            <div class="md:col-span-5 space-y-6">
-               <h2 class="font-serif text-2xl md:text-3xl tracking-wide uppercase leading-tight"> Let's Connect for<br>
-                    <span class="italic font-normal tracking-normal text-base md:text-lg block mt-1">Career, Research, and Academic Opportunities </span></h2>
-                <p class="text-xs text-white/70 font-light leading-relaxed">
-                     Feel free to reach out for professional collaborations, laboratory research initiatives, smart agriculture integration, or any career-driven opportunities.
-                </p>
-                <div class="text-xs space-y-2 pt-2 opacity-90 tracking-wide">
-                    <p><i class="fa-solid fa-envelope mr-3"></i> <a href="mailto:errissaffana3@gmail.com" class="underline">errissaffana3@gmail.com</a></p>
-                    <p><i class="fa-solid fa-phone mr-3"></i> <a href="https://wa.me/6282329246659" target="_blank" class="underline">+62 823 2924 6659</a></p>
-                    <p><i class="fa-brands fa-linkedin mr-3"></i> <a href="http://www.linkedin.com/in/erris-saffana-2a0219222" target="_blank" class="underline">linkedin.com/in/erris-saffana</a></p>
-                </div>
-            </div>
-
-            <div class="md:col-span-7 w-full">
-                <form class="space-y-4 text-xs" onsubmit="event.preventDefault();">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <input type="text" placeholder="FULL NAME" class="w-full bg-white/10 border-b border-white/30 px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white transition-colors bg-transparent">
-                        <input type="email" placeholder="EMAIL ADDRESS" class="w-full bg-white/10 border-b border-white/30 px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white transition-colors bg-transparent">
-                    </div>
-                    <textarea rows="3" placeholder="YOUR MESSAGE" class="w-full bg-white/10 border-b border-white/30 px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white transition-colors bg-transparent"></textarea>
-                    
-                    <button type="button" class="border border-white hover:bg-white hover:text-scrap-sage text-white font-bold px-8 py-3.5 tracking-widest uppercase transition-all duration-300 w-full sm:w-auto">
-                        SEND MESSAGE <i class="fa-solid fa-arrow-right-long ml-2"></i>
-                    </button>
-                </form>
-            </div>
+    <!-- KONTEN UTAMA: Jarak atas disesuaikan agar tombol pas berada di bawah tulisan cetak spanduk -->
+    <div class="max-w-3xl mx-auto flex flex-col items-center justify-end text-center relative z-30 pt-[32%] sm:pt-[28%] md:pt-[24%] pb-12 w-full flex-grow">
+        <!-- Barisan tombol kontak melayang -->
+        <div class="flex flex-col sm:flex-row flex-wrap gap-3 text-[10px] tracking-widest uppercase font-bold justify-center w-full">
+            <!-- Button Email -->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=errissaffana3@gmail.com" target="_blank" class="inline-flex items-center justify-center gap-2 border border-white/40 bg-black/40 hover:bg-white hover:text-black px-5 py-2.5 transition-all duration-300 rounded-sm backdrop-blur-md shadow-md sm:w-auto w-full">
+            <i class="fa-solid fa-envelope"></i> Email
+            </a>
+            
+            <!-- Button WhatsApp -->
+            <a href="https://wa.me/6282329246659" target="_blank" class="inline-flex items-center justify-center gap-2 border border-white/40 bg-black/40 hover:bg-white hover:text-black px-5 py-2.5 transition-all duration-300 rounded-sm backdrop-blur-md shadow-md sm:w-auto w-full">
+                <i class="fa-solid fa-phone"></i> WhatsApp
+            </a>
+            
+            <!-- Button LinkedIn -->
+            <a href="http://www.linkedin.com/in/erris-saffana-2a0219222" target="_blank" class="inline-flex items-center justify-center gap-2 border border-white/40 bg-black/40 hover:bg-white hover:text-black px-5 py-2.5 transition-all duration-300 rounded-sm backdrop-blur-md shadow-md sm:w-auto w-full">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
         </div>
-
-        <div class="max-w-5xl mx-auto mt-20 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between text-[9px] tracking-widest text-white/50 uppercase">
-            <span>&copy; 2026 Erris Saffana Zuhaera. All Rights Reserved.</span>
-            <span class="mt-2 sm:mt-0">DESIGNED TO MATCH THE REFERENCE ART ALBUM MOOD</span>
-        </div>
-    </footer>
+    </div>
+</footer>
 
     <script>
         const menuBtn = document.getElementById('menu-btn');
